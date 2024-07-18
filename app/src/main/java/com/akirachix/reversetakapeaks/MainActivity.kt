@@ -1,5 +1,6 @@
 package com.akirachix.reversetakapeaks
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Validation failed", Toast.LENGTH_SHORT).show()
             }
+        }
+        binding.btnPayments.setOnClickListener {
+            val intent = Intent(this, LandingPage::class.java)
+            startActivity(intent)
         }
     }
 

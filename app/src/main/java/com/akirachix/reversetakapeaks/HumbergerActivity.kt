@@ -6,23 +6,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.akirachix.reversetakapeaks.databinding.ActivityLandingPageBinding
+import com.akirachix.reversetakapeaks.databinding.ActivityHumbergerBinding
 
-class LandingPage : AppCompatActivity() {
-    lateinit var binding: ActivityLandingPageBinding
+class HumbergerActivity : AppCompatActivity() {
+    lateinit var binding: ActivityHumbergerBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityLandingPageBinding.inflate(layoutInflater)
+        binding = ActivityHumbergerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.btnShopNow.setOnClickListener {
+        binding.idDelete.setOnClickListener {
             val intent = Intent(this, ShopActivity::class.java)
             startActivity(intent)
         }
+            binding.tvHome.setOnClickListener {
+                val intent = Intent(this, ShopActivity::class.java)
+                startActivity(intent)
+            }
+
     }
-
-
 }
-
-
