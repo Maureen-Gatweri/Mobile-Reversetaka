@@ -44,6 +44,10 @@ class SignUp : AppCompatActivity() {
             formsError = true
             binding.tilEmail.error = " Your email is required"
         }
+        val userName=binding.etUserName.text.toString()
+        if(userName.isBlank()){
+            binding.tilUsername2.error="create username"
+        }
         val password = binding.etCreatepassword.text.toString()
         if (password.isBlank()) {
             formsError = true
