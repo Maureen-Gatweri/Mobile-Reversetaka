@@ -10,17 +10,20 @@ import com.akirachix.reversetakapeaks.databinding.ActivitySignUpBinding
 
 class SignUp : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.etLogIn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LandingPage::class.java)
             startActivity(intent)
         }
         binding.btnSignUp.setOnClickListener {
             validateRegistration()
+        }
+        binding.etLogIn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 

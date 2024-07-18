@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.akirachix.reversetakapeaks.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+  lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,13 +28,15 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Validation failed", Toast.LENGTH_SHORT).show()
             }
         }
+        binding.btnPayments.setOnClickListener {
+            val intent = Intent(this, LandingPage::class.java)
         binding.etSignIn.setOnClickListener{
             val intent=Intent(this,SignUp::class.java)
             startActivity(intent)
         }
     }
 
-    private fun validateRegistration(): Boolean {
+   fun validateRegistration(): Boolean {
         clearErrors()
         var formErrors = false
         val username = binding.etUsername.text.toString()
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         return !formErrors
     }
 
-    private fun clearErrors() {
+    fun clearErrors() {
         binding.tilUsername.error = null
         binding.tilCreatePassword.error = null
     }
