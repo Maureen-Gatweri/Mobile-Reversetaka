@@ -6,23 +6,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.akirachix.reversetakapeaks.databinding.ActivityLandingPageBinding
+import com.akirachix.reversetakapeaks.databinding.ActivityDescriptionBinding
 
-class LandingPage : AppCompatActivity() {
-    lateinit var binding: ActivityLandingPageBinding
+class DescriptionActivity : AppCompatActivity() {
+    lateinit var binding: ActivityDescriptionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityLandingPageBinding.inflate(layoutInflater)
+       binding = ActivityDescriptionBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
-        binding.btnShopNow.setOnClickListener {
+        binding.tvDelete.setOnClickListener {
             val intent = Intent(this, ShopActivity::class.java)
             startActivity(intent)
         }
     }
-
-
 }
-
-
