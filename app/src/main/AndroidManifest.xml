@@ -15,6 +15,18 @@
         android:theme="@style/Theme.ReversetakaPeaks"
         tools:targetApi="31">
         <activity
+            android:name=".reward_system"
+            android:exported="false" />
+        <activity
+            android:name=".pointsconfirmation"
+            android:exported="false" />
+        <activity
+            android:name=".organisations"
+            android:exported="false" />
+        <activity
+            android:name=".points"
+            android:exported="false" />
+        <activity
             android:name=".confirm_payment"
             android:exported="false" />
         <activity
