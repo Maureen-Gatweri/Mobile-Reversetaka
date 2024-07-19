@@ -46,5 +46,9 @@ class cart : AppCompatActivity() {
             val intent= Intent(this,HumbergerActivity::class.java)
             startActivity(intent)
         }
+        binding.tvcheckout.setOnClickListener{
+            val  intent=Intent(this,select_payment::class.java)
+            startActivity(intent)
+        }
     }
 }
