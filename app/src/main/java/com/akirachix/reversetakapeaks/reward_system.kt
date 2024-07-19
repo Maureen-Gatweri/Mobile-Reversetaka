@@ -6,19 +6,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.akirachix.reversetakapeaks.databinding.ActivityConfirmPaymentBinding
+import com.akirachix.reversetakapeaks.databinding.ActivityRewardSystemBinding
 
-class confirm_payment : AppCompatActivity() {
-    lateinit var binding: ActivityConfirmPaymentBinding
+class reward_system : AppCompatActivity() {
+    lateinit var binding: ActivityRewardSystemBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityConfirmPaymentBinding.inflate(layoutInflater)
+        enableEdgeToEdge()
+        binding=ActivityRewardSystemBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnReedem.setOnClickListener{
-            val intent = Intent(this, reward_system::class.java)
+        binding.btnRedeem.setOnClickListener{
+            val intent = Intent(this, organisations::class.java)
             startActivity(intent)
         }
-
     }
 }
