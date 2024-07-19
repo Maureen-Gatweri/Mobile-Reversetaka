@@ -34,6 +34,10 @@ class ShopAdapter(var shopList: List<Shop>):
             val intent = Intent(holder.itemView.context, DescriptionActivity::class.java)
             holder.itemView.context.startActivity(intent)
         }
+        holder.binding.tvAddtocart1.setOnClickListener {
+            val intent = Intent(holder.itemView.context, cart::class.java)
+            holder.itemView.context.startActivity(intent)
+        }
 
 
     }

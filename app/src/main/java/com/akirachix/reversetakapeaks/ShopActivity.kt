@@ -17,11 +17,14 @@ class ShopActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.rvShop.layoutManager = GridLayoutManager(this, 2)
         listOfShop()
-
         binding.idMenu.setOnClickListener {
             val intent = Intent(this, HumbergerActivity::class.java)
             startActivity(intent)
         }
+
+
+
+
 
 
 
@@ -55,4 +58,5 @@ class ShopActivity : AppCompatActivity() {
         val shopAdapter = ShopAdapter(myProfiles)
         binding.rvShop.adapter = shopAdapter
     }
+
 }
