@@ -15,6 +15,21 @@
         android:theme="@style/Theme.ReversetakaPeaks"
         tools:targetApi="31">
         <activity
+            android:name=".confirm_payment"
+            android:exported="false" />
+        <activity
+            android:name=".confirm_paypal"
+            android:exported="false" />
+        <activity
+            android:name=".mpesa_payment"
+            android:exported="false" />
+        <activity
+            android:name=".paypal_payment"
+            android:exported="false" />
+        <activity
+            android:name=".select_payment"
+            android:exported="false" />
+        <activity
             android:name=".cancedcart"
             android:exported="false" />
         <activity

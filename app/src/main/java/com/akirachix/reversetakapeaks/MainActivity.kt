@@ -18,23 +18,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnPayments.setOnClickListener {
-            if (validateRegistration()) {
-                val intent=Intent(this,LandingPage::class.java)
-                startActivity(intent)
-            }
-
-            else {
-
-                Toast.makeText(this, "Validation failed", Toast.LENGTH_SHORT).show()
-            }
+            val intent =Intent(this,LandingPage::class.java)
+            startActivity(intent)
+            validateRegistration()
         }
-        binding.btnPayments.setOnClickListener {
-            val intent = Intent(this, LandingPage::class.java)
-        binding.etSignIn.setOnClickListener{
-            val intent=Intent(this,SignUp::class.java)
+        binding.etSignIn.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
     }
+
 
    fun validateRegistration(): Boolean {
         clearErrors()

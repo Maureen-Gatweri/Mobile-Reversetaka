@@ -22,5 +22,9 @@ class DescriptionActivity : AppCompatActivity() {
             var intent = Intent(this, cart::class.java)
             startActivity(intent)
         }
+        binding.tvBuynow.setOnClickListener {
+            val  intent=Intent(this,select_payment::class.java)
+            startActivity(intent)
+        }
     }
 }
