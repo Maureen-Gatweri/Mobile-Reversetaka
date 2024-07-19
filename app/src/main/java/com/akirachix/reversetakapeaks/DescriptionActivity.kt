@@ -18,5 +18,9 @@ class DescriptionActivity : AppCompatActivity() {
             val intent = Intent(this, ShopActivity::class.java)
             startActivity(intent)
         }
+        binding.tvAddtocart.setOnClickListener {
+            var intent = Intent(this, cart::class.java)
+            startActivity(intent)
+        }
     }
 }
